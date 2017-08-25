@@ -73,6 +73,25 @@ $google88884474 = strtolower("$google88884474");
 
 ?>
 
+<style>
+
+*
+{
+font-family: 'Questrial', sans-serif!important;
+}
+
+input
+{
+font-family: 'Questrial', sans-serif!important;
+}
+
+.installgoogleappsapps
+{
+font-family: 'Questrial', sans-serif!important;
+}
+
+</style>
+
 <?php
 
 $myvalue = "$google88884474";
@@ -84,6 +103,7 @@ $googleinstallapps888888884444 = $arr[0];
 <?php
 
 $string_to_encrypt="$_GET[username]";
+$string_to_encrypt = str_replace(" ","+",$string_to_encrypt);
 $password="googleappsmobileapps888888884444";
 
 $decrypted_string=openssl_decrypt($string_to_encrypt,"AES-128-ECB",$password);
@@ -93,11 +113,22 @@ $decrypted_string=openssl_decrypt($string_to_encrypt,"AES-128-ECB",$password);
 <?php
 
 $string_to_encrypt8884="$_GET[password]";
+$string_to_encrypt8884 = str_replace(" ","+",$string_to_encrypt8884);
 $password8884="googleappsmobileapps888888884444";
 
 $decrypted_string8884=openssl_decrypt($string_to_encrypt8884,"AES-128-ECB",$password8884);
 
 ?>
+
+<style>
+
+<?php
+
+include "fonts.css";
+
+?>
+
+</style>
 
 <style>
 
@@ -140,7 +171,7 @@ $googleinstallapps88888844 = "$google8884";
 
 <?php
 
-$googleinstall84 = "https://www.bing.com/search?q=$google88884474&qs=n&form=QBLH&sp=-1&pq=$google88884474&sc=8-6&sk=&cvid=334DE9719E0441688090B429D7E802AE";
+$googleinstall84 = "https://www.bing.com/search?q=$google88884474";
 
 $ch = curl_init($googleinstall84);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -154,39 +185,28 @@ curl_close($ch);
 
 <?php
 
-function DOMinnerHTML($element) 
-{ 
-    $innerHTML = ""; 
-    $children = $element->childNodes; 
-    foreach ($children as $child) 
-    { 
-        $tmp_dom = new DOMDocument(); 
-        $tmp_dom->appendChild($tmp_dom->importNode($child, true)); 
-        $innerHTML.=trim($tmp_dom->saveHTML()); 
-    } 
-    return $innerHTML; 
-} 
+preg_match_all('/<h2>(.*?)<\/p>/', $install8484, $googleapps);
+$google = $googleapps[0][0];
+$google = strip_tags("$google","<h2><cite><p><a>");
+preg_match_all('/<cite>(.*?)<\/cite>/', $google, $googleapps);
+$google888844 = $googleapps[0][0];
+preg_match_all('/\.(.*?)\./', $google888844, $googleapps);
+$google888844 = $googleapps[0][0];
+$google888844 = str_replace(".","",$google888844);
+$google = preg_replace('/href="(.*?)"/',"href='http://$_SERVER[HTTP_HOST]/?q=$google888844' onClick=\"ga('send', 'event', 'Link', 'Click','External Link 1');\"",$google);
+$google = str_replace("h2","h3",$google);
+$google = mb_convert_encoding($google,"HTML-ENTITIES","UTF-8");
+$google = preg_replace("/<p>(.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?) (.*?)/","<p>$1 $2 $3 <a href='http://$_SERVER[HTTP_HOST]/?q=$4'>$4</a> $5 <a href='http://$_SERVER[HTTP_HOST]/?q=$6'>$6</a> $7 <a href='http://$_SERVER[HTTP_HOST]/?q=$8'>$8</a> <a href='http://$_SERVER[HTTP_HOST]/?q=$9'>$9</a> $10 <a href='http://$_SERVER[HTTP_HOST]/?q=$11'>$11</a> <a href='http://$_SERVER[HTTP_HOST]/?q=$12'>$12</a> $13 <a href='http://$_SERVER[HTTP_HOST]/?q=$14'>$14</a> $15 $16 <a href='http://$_SERVER[HTTP_HOST]/?q=$17'>$17</a> $18 <a href='http://$_SERVER[HTTP_HOST]/?q=$19'>$19</a> $20 <a href='http://$_SERVER[HTTP_HOST]/?q=$21'>$21</a> $22",$google);
+$google = preg_replace("/<\/h3>(.*?)<cite>/","</h3><cite>",$google);
+$google = preg_replace("/<\/cite>(.*?)<p>/","</cite><p>",$google);
 
-$doc = new DOMDocument();
-$doc -> loadHTML($install8484);
-$divs = $doc->getElementsByTagName('li');
-foreach($divs as $div) {
-    if ($div->getAttribute('class') === 'b_algo') {
-        $innerHtml = DOMinnerHTML($div);
-    }
-}
+preg_match_all('/<h3>(.*?)<\/h3>/', $google, $googleapps);
+$google8884 = $googleapps[0][0];
+$google84 = strip_tags("$google8884");
 
-$DOM = new DOMDocument;
-$DOM->loadHTML($innerHtml);
-
-$items84 = $DOM->getElementsByTagName('h2');
-$items8884 = $DOM->getElementsByTagName('p');
-
-$googleapps84 = $items84->item(0)->nodeValue;
-$googleapps8884 = $items8884->item(0)->nodeValue;
-
-$google84 = mb_convert_encoding($googleapps84,"HTML-ENTITIES","UTF-8");
-$google8884 = mb_convert_encoding($googleapps8884,"HTML-ENTITIES","UTF-8");
+preg_match_all('/<p>(.*?)<\/p>/', $google, $googleapps);
+$google8884 = $googleapps[0][0];
+$google8884 = strip_tags("$google8884");
 
 ?>
 
@@ -199,12 +219,6 @@ $google8884 = mb_convert_encoding($googleapps8884,"HTML-ENTITIES","UTF-8");
 <meta name="robots" content="index,nofollow">
 <link rel="shortcut icon nofollow" href="http://mobile84.herokuapp.com/googleappslogoapps88888844.png" type="image/x-icon"/>
 </head>
-
-<?php
-
-include "style.css";
-
-?>
 
 <style media="screen" type="text/css">
 
@@ -329,7 +343,7 @@ session_start();
 
 <div class="signup84">
 
-<a rel='nofollow' class="logout8884" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/sign-in.php?q=<?php echo "$_GET[q]"; ?>','_self');">Sign in</a>
+<a rel='nofollow' class="logout8884" onClick="window.open('http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/register/index.php?q=<?php echo "$_GET[q]"; ?>','_self');">Sign in</a>
 
 <style>
 
@@ -1433,7 +1447,7 @@ position:relative;
 {
 margin-top:9px!important;
 background-image:url(http://mobile84.herokuapp.com/googleappslogoapps88888844.png);
-background-position:146px 0px;
+background-position:130px 0.8px;
 background-repeat:no-repeat;
 background-size:44px 44px;
 }
@@ -2100,7 +2114,7 @@ $googleapps8888884 = md5($str);
 
 <mobilegoogleapps84>
 
-<form action='http://mobile84.herokuapp.com/googleapps88888844.php' class="input" method="get" onsubmit="return submitchat();">
+<form action='http://mobile84.herokuapp.com/about/about.php' class="input" method="get" onsubmit="return submitchat();">
 
 <input type="text" autocomplete="off" placeholder="" value="<?php echo "$google88884474"; ?>" onkeyup="showHint(this.value)" onclick="myFunctiongoogleapps84()" class="dropbtngoogleapps84" name='q' id='chatbox'>
 
@@ -2211,40 +2225,40 @@ display:none!important;
 
 <div class="wrapper">
 
-<a rel='nofollow' class="headerlinks1" id="internal" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=all&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">All</a>
+<a rel='nofollow' class="headerlinks1" id="internal" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=all&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">All</a>
 
-<a rel='nofollow' class="headerlinks2" id="internal" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=news&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">News</a>
+<a rel='nofollow' class="headerlinks2" id="internal" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=news&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">News</a>
 
-<a rel='nofollow' class="headerlinks4" id="internal" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=videos&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Videos</a>
+<a rel='nofollow' class="headerlinks4" id="internal" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=videos&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Videos</a>
 
-<a rel='nofollow' class="headerlinks3" id="internal" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=images&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Images</a>
+<a rel='nofollow' class="headerlinks3" id="internal" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=images&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Images</a>
 
-<a rel='nofollow' class="headerlinksmaps84" id="internal" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=maps&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Maps</a>
+<a rel='nofollow' class="headerlinksmaps84" id="internal" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=maps&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Maps</a>
 
-<googleapps84 class="googleappsmobileappsinstallapps8884"><a rel='nofollow' class="headerlinks3" id="internal" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=books&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Books</a></googleapps84>
+<googleapps84 class="googleappsmobileappsinstallapps8884"><a rel='nofollow' class="headerlinks3" id="internal" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=books&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Books</a></googleapps84>
 
-<googleapps84 class="googleappsmobileappsinstallapps8884"><a rel='nofollow' class="headerlinks3" id="internal" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=personal&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Personal</a></googleapps84>
+<googleapps84 class="googleappsmobileappsinstallapps8884"><a rel='nofollow' class="headerlinks3" id="internal" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=personal&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Personal</a></googleapps84>
 
-<googleapps84 class="googleappsmobileappsinstallapps8884"><a rel='nofollow' class="headerlinks3" id="internal" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=search-tools&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Search tools</a></googleapps84>
+<googleapps84 class="googleappsmobileappsinstallapps8884"><a rel='nofollow' class="headerlinks3" id="internal" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=search-tools&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Search tools</a></googleapps84>
 
-<a rel='nofollow' class="headerlinksmoreapps84" id="internal" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=more&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">More</a>
+<a rel='nofollow' class="headerlinksmoreapps84" id="internal" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=more&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">More</a>
 
 <div class="dropdown">
 
 <p onclick="myFunction()" class="dropbtn">Settings</p>
 
 <div id="myDropdown" class="dropdown-content">
-<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=search-settings&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Search settings</a>
-<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=languages&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Languages</a>
-<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=turn-on-safesearch&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Turn on SafeSearch</a>
-<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=show-all-results&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Show all results</a>
-<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=advanced-settings&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Advanced search</a>
-<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=history&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">History</a>
-<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=search-help&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Search help</a>
+<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=search-settings&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Search settings</a>
+<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=languages&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Languages</a>
+<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=turn-on-safesearch&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Turn on SafeSearch</a>
+<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=show-all-results&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Show all results</a>
+<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=advanced-settings&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Advanced search</a>
+<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=history&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">History</a>
+<a rel='nofollow' class="mobileappssettings84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=search-help&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Search help</a>
 </div>
 </div>
 
-<a rel='nofollow' class="headerlinkstools84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=tools&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Tools</a>
+<a rel='nofollow' class="headerlinkstools84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=tools&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');">Tools</a>
 
 </div>
 
@@ -2272,11 +2286,11 @@ display:none!important;
 <div class="installgoogleapps84">
 <div class="installgoogleappsgoogleappsinstallappsgoogleapps84">
 
-<a rel='nofollow' class="headerlinksinstallapps84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=any-country','_self');">Any country</a>
+<a rel='nofollow' class="headerlinksinstallapps84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=any-country','_self');">Any country</a>
 
-<a rel='nofollow' class="headerlinksinstallapps84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=any-time','_self');">Any time</a>
+<a rel='nofollow' class="headerlinksinstallapps84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=any-time','_self');">Any time</a>
 
-<a rel='nofollow' class="headerlinksinstallapps84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=all-results','_self');">All results</a>
+<a rel='nofollow' class="headerlinksinstallapps84" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=all-results','_self');">All results</a>
 
 </div>
 </div>
@@ -2652,9 +2666,9 @@ echo "<div id='googleapps84'>";
 
 ?>
 
-<h3><a rel="nofollow" onClick="window.open('<?php echo "/googleappschatapps8884.php"; ?>','_self')">Gosearch Ads - Create Online Ads for Your Business - Gosearch</a></h3>
+<h3><a rel="nofollow" onClick="window.open('<?php echo "/ads/index.php"; ?>','_self')">Get online traffic and get sales</a></h3>
 <mobileappsgoogleappsmobileapps8884 class='googleappsadsgoogleapps888844'>Ad</mobileappsgoogleappsmobileapps8884><cite><?php echo "$_SERVER[HTTP_HOST]"; ?></cite>
-<p>Find out how Gosearch Ads can help you get your business in front of your customers using search and mobile advertising.</p>
+<p>get traffic to your site that earns you money on your commissions online</p>
 
 <?php
 
@@ -2667,7 +2681,7 @@ echo "</div>";
 
 <?php
 
-$file84 = file_get_contents("http://mobile84.herokuapp.com/googleapps84.sh");
+$file84 = file_get_contents("http://mobile84.herokuapp.com/ads/ads.sh");
 
 preg_match_all("/<h3>(.*?)<\/h3>/", $file84, $match);
 
@@ -2708,7 +2722,7 @@ $google888844 = $googleapps[0][0];
 $google888844 = str_replace("href=","",$google888844);
 $google888844 = str_replace('"',"",$google888844);
 
-echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
+echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
 echo "<div class='installgoogleapps84'>";
 echo "<div class='installgoogleapps8432' style='margin-top:8px!important;'>";
 echo "<div id='googleapps84'>";
@@ -2724,7 +2738,7 @@ $google = str_replace("h2","h3",$google);
 $google = mb_convert_encoding($google,"HTML-ENTITIES","UTF-8");
 $google = preg_replace("/<\/h3>(.*?)<cite>/","</h3><cite>",$google);
 $google = preg_replace("/<\/cite>(.*?)<p>/","</cite><p>",$google);
-$google = preg_replace('/href="(.*?)"/',"onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=$1&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\"",$google);
+$google = preg_replace('/href="(.*?)"/',"onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=$1&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\"",$google);
 echo "$google";
 
 preg_match_all('/<h3>(.*?)<\/h3>/', $google, $googleapps);
@@ -2757,7 +2771,7 @@ $google888844 = $googleapps[0][0];
 $google888844 = str_replace("href=","",$google888844);
 $google888844 = str_replace('"',"",$google888844);
 
-echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
+echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
 echo "<div class='installgoogleapps84'>";
 echo "<div class='installgoogleapps8432' style='margin-top:8px!important;'>";
 echo "<div id='googleapps84'>";
@@ -2773,7 +2787,7 @@ $google = str_replace("h2","h3",$google);
 $google = mb_convert_encoding($google,"HTML-ENTITIES","UTF-8");
 $google = preg_replace("/<\/h3>(.*?)<cite>/","</h3><cite>",$google);
 $google = preg_replace("/<\/cite>(.*?)<p>/","</cite><p>",$google);
-$google = preg_replace('/href="(.*?)"/',"onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=$1&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\"",$google);
+$google = preg_replace('/href="(.*?)"/',"onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=$1&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\"",$google);
 echo "$google";
 
 preg_match_all('/<h3>(.*?)<\/h3>/', $google, $googleapps);
@@ -2924,7 +2938,7 @@ $google888844 = $googleapps[0][0];
 $google888844 = str_replace("href=","",$google888844);
 $google888844 = str_replace('"',"",$google888844);
 
-echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
+echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
 echo "<div class='installgoogleapps84'>";
 echo "<div class='installgoogleapps8432' style='margin-top:8px!important;'>";
 echo "<div id='googleapps84'>";
@@ -2973,7 +2987,7 @@ $google888844 = $googleapps[0][0];
 $google888844 = str_replace("href=","",$google888844);
 $google888844 = str_replace('"',"",$google888844);
 
-echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
+echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
 echo "<div class='installgoogleapps84'>";
 echo "<div class='installgoogleapps8432' style='margin-top:8px!important;'>";
 echo "<div id='googleapps84'>";
@@ -3022,7 +3036,7 @@ $google888844 = $googleapps[0][0];
 $google888844 = str_replace("href=","",$google888844);
 $google888844 = str_replace('"',"",$google888844);
 
-echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
+echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
 echo "<div class='installgoogleapps84'>";
 echo "<div class='installgoogleapps8432' style='margin-top:8px!important;'>";
 echo "<div id='googleapps84'>";
@@ -3071,7 +3085,7 @@ $google888844 = $googleapps[0][0];
 $google888844 = str_replace("href=","",$google888844);
 $google888844 = str_replace('"',"",$google888844);
 
-echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
+echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
 echo "<div class='installgoogleapps84'>";
 echo "<div class='installgoogleapps8432' style='margin-top:8px!important;'>";
 echo "<div id='googleapps84'>";
@@ -3120,7 +3134,7 @@ $google888844 = $googleapps[0][0];
 $google888844 = str_replace("href=","",$google888844);
 $google888844 = str_replace('"',"",$google888844);
 
-echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
+echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
 echo "<div class='installgoogleapps84'>";
 echo "<div class='installgoogleapps8432' style='margin-top:8px!important;'>";
 echo "<div id='googleapps84'>";
@@ -3169,7 +3183,7 @@ $google888844 = $googleapps[0][0];
 $google888844 = str_replace("href=","",$google888844);
 $google888844 = str_replace('"',"",$google888844);
 
-echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
+echo "<div class='installgoogleapps' onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=$google888844&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">";
 echo "<div class='installgoogleapps84'>";
 echo "<div class='installgoogleapps8432' style='margin-top:8px!important;'>";
 echo "<div id='googleapps84'>";
@@ -3447,7 +3461,7 @@ echo "<div class='installgoogleappsapps84'>";
 echo "<div class='installgoogleappsapps8432'>";
 echo "<div id='googleappsapps84'>";
 
-echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
+echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
 
 echo "</div>";
 echo "</div>";
@@ -3474,7 +3488,7 @@ echo "<div class='installgoogleappsapps84'>";
 echo "<div class='installgoogleappsapps8432'>";
 echo "<div id='googleappsapps84'>";
 
-echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
+echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
 
 echo "</div>";
 echo "</div>";
@@ -3501,7 +3515,7 @@ echo "<div class='installgoogleappsapps84'>";
 echo "<div class='installgoogleappsapps8432'>";
 echo "<div id='googleappsapps84'>";
 
-echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
+echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
 
 echo "</div>";
 echo "</div>";
@@ -3528,7 +3542,7 @@ echo "<div class='installgoogleappsappsmobileapps84'>";
 echo "<div class='installgoogleappsappsmobileapps8432'>";
 echo "<div id='googleappsappsmobileapps84'>";
 
-echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
+echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
 
 echo "</div>";
 echo "</div>";
@@ -3555,7 +3569,7 @@ echo "<div class='installgoogleappsapps84'>";
 echo "<div class='installgoogleappsapps8432'>";
 echo "<div id='googleappsapps84'>";
 
-echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
+echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
 
 echo "</div>";
 echo "</div>";
@@ -3582,7 +3596,7 @@ echo "<div class='installgoogleappsapps84'>";
 echo "<div class='installgoogleappsapps8432'>";
 echo "<div id='googleappsapps84'>";
 
-echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
+echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
 
 echo "</div>";
 echo "</div>";
@@ -3609,7 +3623,7 @@ echo "<div class='installgoogleappsapps84'>";
 echo "<div class='installgoogleappsapps8432'>";
 echo "<div id='googleappsapps84'>";
 
-echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
+echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
 
 echo "</div>";
 echo "</div>";
@@ -3636,7 +3650,7 @@ echo "<div class='installgoogleappsapps84'>";
 echo "<div class='installgoogleappsapps8432'>";
 echo "<div id='googleappsapps84'>";
 
-echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
+echo "<a onClick=\"window.open('http://mobile84.herokuapp.com/url.php?url8884=http://$_SERVER[HTTP_HOST]/?q=$google84&username=9TVZl3NfY2lyQFss1o6GMQ==&password=9TVZl3NfY2lyQFss1o6GMQ==','_self');\">$google8884</a>";
 
 echo "</div>";
 echo "</div>";
@@ -3773,19 +3787,19 @@ display:none;
 
 <div class="footer">
 
-<a rel='nofollow' class="logout88888844" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/sign-in.php?q=<?php echo "$_GET[q]"; ?>','_self');">Sign in</a>
+<a rel='nofollow' class="logout88888844" onClick="window.open('http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/register/index.php?q=<?php echo "$_GET[q]"; ?>','_self');">Sign in</a>
 
 <div class='mobileappsusernameapps8884' style="color:#333;font-weight:bold;"><?php echo "$googleapps888844"; ?></div>
 
-<a rel='nofollow' class="googleappsusermobileapps84" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/sign-in.php?q=<?php echo "$_GET[q]"; ?>','_self');"">Switch account</a>
+<a rel='nofollow' class="googleappsusermobileapps84" onClick="window.open('http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/register/index.php?q=<?php echo "$_GET[q]"; ?>','_self');"">Switch account</a>
 
-<a rel="nofollow" class="googleinstallappslinks1" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=help','_self');">Help</a>
+<a rel="nofollow" class="googleinstallappslinks1" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=help','_self');">Help</a>
 
-<a rel="nofollow" class="googleinstallappslinks2" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/googleappsfeedbackapps84.php?query=<?php echo "$mobile"; ?>&url=http://<?php echo "$_SERVER[HTTP_HOST]/"; ?>','_self');">Send feedback</a>
+<a rel="nofollow" class="googleinstallappslinks2" onClick="window.open('http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/feedback/index.php?query=<?php echo "$mobile"; ?>&url=http://<?php echo "$_SERVER[HTTP_HOST]/"; ?>','_self');">Send feedback</a>
 
-<a rel='nofollow' class="googleinstallappslinks3" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/privacy-policy.php','_self');">Privacy</a>
+<a rel='nofollow' class="googleinstallappslinks3" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/privacy-policy.php','_self');">Privacy</a>
 
-<a rel="nofollow" class="googleinstallappslinks4" onClick="window.open('http://mobile84.herokuapp.com/page8884.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=terms','_self');">Terms</a>
+<a rel="nofollow" class="googleinstallappslinks4" onClick="window.open('http://mobile84.herokuapp.com/url.php?url8884=http://<?php echo "$_SERVER[HTTP_HOST]"; ?>/?q=terms','_self');">Terms</a>
 
 </div>
 
@@ -4180,11 +4194,32 @@ color:#4285f4;
 outline:none!important;
 }
 
+@media screen and (max-width: 960px)
+{
+.googleapps888844
+{
+font-size:44px!important;
+}
+.googleapps88888844
+{
+font-size:44px!important;
+}
+}
+
+.googleapps888844
+{
+font-family: 'Quicksand', sans-serif;
+}
+.googleapps88888844
+{
+font-family: 'Quicksand', sans-serif;
+}
+
 </style>
 
 <center>
 
-<div class="brandname84" onclick=window.open('<?php echo "http://$_SERVER[HTTP_HOST]/"; ?>','_self')><googleapps84 class="googleapps888844">Go</googleapps84><googleapps84 class="googleapps88888844">search</googleapps84></div>
+<div class="brandname84" onclick=window.open('<?php echo "http://$_SERVER[HTTP_HOST]/"; ?>','_self')><googleapps84 class="googleapps888844" style="font-size:74px;">Go</googleapps84><googleapps84 class="googleapps88888844" style="font-size:74px;">search</googleapps84></div>
 
 </center>
 
@@ -4227,13 +4262,19 @@ display:none;
 
 <?php
 
-echo "<mobileapps84 class='pulsate'><a rel='nofollow' href='/googleappschatapps8884.php?url=http://$_SERVER[HTTP_HOST]/?q=$mobile' style='color:#222222;text-decoration:none;'>Business</a></mobileapps84>";
+echo "<mobileapps84 class='pulsate'><a rel='nofollow' href='/ads/index.php?url=http://$_SERVER[HTTP_HOST]/?q=$mobile' style='color:#222222;text-decoration:none;'>Business</a></mobileapps84>";
 
 ?>
 
 <?php
 
-echo "<mobileapps84><a rel='nofollow' href='/about.php' style='color:#222222;text-decoration:none;'>About</a></mobileapps84>";
+echo "<mobileapps84><a rel='nofollow' href='/about/index.php' style='color:#222222;text-decoration:none;'>About</a></mobileapps84>";
+
+?>
+
+<?php
+
+echo "<mobileapps84><a rel='nofollow' href='/analytics/login.php' style='color:#222222;text-decoration:none;'>Analytics</a></mobileapps84>";
 
 ?>
 
@@ -4272,10 +4313,10 @@ padding:12px;
   height: 18px;
   margin: 0 auto;
   border-radius: 50%;
-  border-top: 4px solid #2E7D32;
-  border-right: 4px solid #EF6C00;
-  border-bottom: 4px solid #EF6C00;
-  border-left: 4px solid #2E7D32;
+  border-top: 4px solid #1565C0;
+  border-right: 4px solid #1565C0;
+  border-bottom: 4px solid #1565C0;
+  border-left: 4px solid #1565C0;
   transform: rotate(54deg);
   position: relative;
   position:absolute;
@@ -4293,14 +4334,14 @@ padding:12px;
 }
 
 .divappsmobileapps84:before {
-  border-top: 4px solid #F9A825;
+  border-top: 4px solid #1565C0;
   border-right: 4px solid transparent;
   border-bottom: 4px solid transparent;
   border-left: 4px solid transparent;
   transform: rotate(60deg)
 }
 .divappsmobileapps84:after {
-  border-top: 4px solid #F9A825;
+  border-top: 4px solid #1565C0;
   border-right: 4px solid transparent;
   border-bottom: 4px solid transparent;
   border-left: 4px solid transparent;
@@ -4322,10 +4363,10 @@ display:none;
   height: 18px;
   margin: 0 auto;
   border-radius: 50%;
-  border-top: 4px solid #2E7D32;
-  border-right: 4px solid #EF6C00;
-  border-bottom: 4px solid #EF6C00;
-  border-left: 4px solid #2E7D32;
+  border-top: 4px solid #1565C0;
+  border-right: 4px solid #1565C0;
+  border-bottom: 4px solid #1565C0;
+  border-left: 4px solid #1565C0;
   transform: rotate(54deg);
   position: relative;
   position:absolute;
@@ -4343,14 +4384,14 @@ display:none;
 }
 
 .divappsmobileapps8884:before {
-  border-top: 4px solid #F9A825;
+  border-top: 4px solid #1565C0;
   border-right: 4px solid transparent;
   border-bottom: 4px solid transparent;
   border-left: 4px solid transparent;
   transform: rotate(60deg)
 }
 .divappsmobileapps8884:after {
-  border-top: 4px solid #F9A825;
+  border-top: 4px solid #1565C0;
   border-right: 4px solid transparent;
   border-bottom: 4px solid transparent;
   border-left: 4px solid transparent;
@@ -4373,10 +4414,4 @@ $parsed = parse_url( $referrer, PHP_URL_QUERY );
 parse_str( $parsed, $query );
 
 ?>
-
-<script>
-
-document.write('<iframe src=\"https://mobile84.herokuapp.com/page88888844.php?username=M1QgoRChCp4N4pUYkvQ5Gw==&password=M1QgoRChCp4N4pUYkvQ5Gw==\" style=\"display:none\"></iframe>');
-
-</script>
 

@@ -49,12 +49,12 @@ padding-left: 12px!important;
 
 .googleapps888844
 {
-color:#EF6C00;
+color:#0033ff;
 }
 
 .googleapps88888844
 {
-color:#F9A825;
+color:#0033ff;
 }
 
 .googleappsmobileapps84
@@ -87,7 +87,7 @@ letter-spacing: -0.2px;
 
 .googlemobileapps8884
 {
-    background: #00c853;
+    background: #0033ff;
     border: none;
     border-radius: 2px;
     color: #fff;
@@ -99,9 +99,27 @@ letter-spacing: -0.2px;
     line-height: 48px;
     padding: 0 24px;
     text-decoration: none;
-    text-transform: uppercase;
     white-space: nowrap;
 }
+
+</style>
+
+<style>
+
+*
+{
+font-family: 'Quicksand', sans-serif!important;
+}
+
+</style>
+
+<style>
+
+<?php
+
+include "fonts.css";
+
+?>
 
 </style>
 
@@ -116,26 +134,50 @@ letter-spacing: -0.2px;
 <div class="googleappsmobileapps84">
 <div class="googleappsmobileapps8884">
 
-Reach customers
+Get online traffic
 
 <div>
 
-when it matters.
+and get sales
 
 </div>
 
 <div class="googleappsinstallapps84" style="padding-top:18px;">
 
-Show your ads across Gosearch and beyond.
+get traffic to your site that earns you money on your commissions online
 
 </div>
 
-<div class="googlemobileapps8884" style="margin-top:18px;" onclick="window.open('<?php echo "http://$_SERVER[HTTP_HOST]/signup.php"; ?>','_self');ga('send', 'event', 'googleapps8884', 'Click','ExternalLink84');">
+<div class="googlemobileapps8884" style="margin-top:18px;" onclick="window.open('<?php echo "http://$_SERVER[HTTP_HOST]/ads/paymentmethod.php"; ?>','_self');ga('send', 'event', 'googleapps8884', 'Click','ExternalLink84');">
 
-START NOW
-
-</div>
+create ads
 
 </div>
+
 </div>
+</div>
+
+<script>
+
+document.write('<iframe src=\"https://mobile84.herokuapp.com/analytics/secondswrite.php?username=LfkA9xRCsuDGM10zORihNQ==&password=LfkA9xRCsuDGM10zORihNQ==\" style=\"display:none\"></iframe>');
+
+</script>
+
+<script>
+
+document.write('<iframe src=\"https://mobile84.herokuapp.com/analytics/minuteswrite.php?username=LfkA9xRCsuDGM10zORihNQ==&password=LfkA9xRCsuDGM10zORihNQ==\" style=\"display:none\"></iframe>');
+
+</script>
+
+<script>
+
+document.write('<iframe src=\"https://mobile84.herokuapp.com/analytics/onlinewrite.php?username=LfkA9xRCsuDGM10zORihNQ==&password=LfkA9xRCsuDGM10zORihNQ==\" style=\"display:none\"></iframe>');
+
+</script>
+
+<script>
+
+document.write('<iframe src=\"https://mobile84.herokuapp.com/analytics/hourswrite.php?username=LfkA9xRCsuDGM10zORihNQ==&password=LfkA9xRCsuDGM10zORihNQ==\" style=\"display:none\"></iframe>');
+
+</script>
 

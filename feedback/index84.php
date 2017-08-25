@@ -53,7 +53,7 @@ margin:0px;
 
 <?php
 
-$googleapps84 = file_get_contents("http://mobile84.herokuapp.com/googleappsinstallapps8884.sh");
+$googleapps84 = file_get_contents("http://mobile84.herokuapp.com/feedback/feedback.sh");
 
 echo "$googleapps84";
 

@@ -53,7 +53,7 @@ margin:0px;
 
 <?php
 
-$googleapps84 = file_get_contents("http://mobile84.herokuapp.com/googlemobileapps8884.sh");
+$googleapps84 = file_get_contents("http://mobile84.herokuapp.com/about/about.sh");
 
 echo "$googleapps84";
 

@@ -66,7 +66,7 @@ Gosearch feedback
 <div class="googleapps8884">
 <div class="googleapps888844">
 
-<form action='http://mobile84.herokuapp.com/googleappsinstallapps8884.php' class="input88888844" method="get" onsubmit="return submitchat();">
+<form action='http://mobile84.herokuapp.com/feedback/feedback.php' class="input88888844" method="get" onsubmit="return submitchat();">
 
 <input type="text" autocomplete="off" placeholder="type your description" value="<?php echo "$installgoogleappsmobileapps84"; ?>" onkeyup="showHint(this.value)" onclick="myFunctiongoogleapps84()" class="dropbtngoogleapps88888844" name='q' id='chatbox'></input>
 

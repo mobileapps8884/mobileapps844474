@@ -7,14 +7,6 @@ $googleappsgooglemobileapps8884 = "$_POST[url]";
 <?php
 
 $mobile = "$_SERVER[REQUEST_URI]";
-$mobile = str_replace('/','',$mobile);
-$mobile = str_replace('?','',$mobile);
-$mobile = str_replace('q=','',$mobile);
-$mobile = str_replace('-','+',$mobile);
-$mobile = str_replace('&','',$mobile);
-$mobile = str_replace('logout=1','',$mobile);
-$mobile = preg_replace('/username=(.*?)$/','',$mobile);
-$mobile = preg_replace('/([0-9]+)/','',$mobile);
 $installgoogleappsmobileapps84 = "$mobile";
 
 $installappsmobileapps84 = "$mobile";
@@ -364,18 +356,18 @@ $date = date("Y-m-d");
 <?php
 
 $string_to_encrypt88888844="$googleapps88888844";
-$password88888844="googleapps84";
+$password88888844="googleapps888888884474";
 $encrypted_string888888884444=openssl_encrypt($string_to_encrypt88888844,"AES-128-ECB",$password88888844);
 
 $string_to_encrypt88884474="$googleapps888844";
-$password888844="googleapps84";
+$password888844="googleapps888888884474";
 $encrypted_string88884474=openssl_encrypt($string_to_encrypt88884474,"AES-128-ECB",$password888844);
 
 ?>
 
 <div style="text-align:left;">
 
-go to the search result <a rel="nofollow" onClick="window.open('<?php echo "$googleappsgooglemobileapps8884/?q=$_POST[q]&username=$encrypted_string888888884444&password=$encrypted_string88884474"; ?>','_self')">page</a>
+create a ad <a rel="nofollow" onClick="window.open('<?php echo "http://$_SERVER[HTTP_HOST]/ads/publish.php?username=$encrypted_string888888884444&password=$encrypted_string88884474"; ?>','_self')">page</a>
 
 </div>
 

